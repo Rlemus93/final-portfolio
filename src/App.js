@@ -44,7 +44,7 @@ const App = () => {
   };
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:your_email@example.com';
+    window.location.href = 'mailto:rlemus93@gmail.com';
   };
 
   return (
