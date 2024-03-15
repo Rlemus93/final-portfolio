@@ -5,8 +5,11 @@ const Projects = ({ projectName }) => {
     <div className='card'>
      <div className='projectname'> <h3><u>Current Projects</u></h3> 
      <h3> {projectName[0]}</h3>
+  
      </div>
+     <div className='techstack'>
       <p> {projectName[1]}</p>
+      </div>
       <div className='project-image'>
         {projectName[2]}
         </div>
