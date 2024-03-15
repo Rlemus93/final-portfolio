@@ -1,38 +1,240 @@
-.App {
+body {
+  background: linear-gradient(to right, #c1e5f3, #000000); 
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  background-color: linear-gradient(to right, #c1e5f3, #000000);
+  padding: 20px;
+  border-radius: 20px;
+
+}
+
+.card {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 800px;
+  height: 450px;
+  padding: 20px;
   text-align: center;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 215px rgba(255, 255, 255, 0.976);
+  background-color: linear-gradient(to right, #c1e5f3, #000000);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card:hover {
+  transform: none; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.project-image {
+  margin-top: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.project-image img {
+  max-width: 1000px; 
+  height: auto;
+  max-height: 320px; 
+  transition: transform 0.3s;
+  border-radius: 20px;
+  cursor:zoom-in;
+}
+
+.project-image img:hover {
+  transform: scale(1.1); 
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projectname {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000; 
+  transition: text-shadow 0.3s;
+}
+
+.projectname:hover {
+  
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button {
+  height: 40px;
+  width: 120px;
+  border: none;
+  border-radius: 8px; 
+  margin-right: 10px;
+  background-color: #646667; 
+  color: #c1e5f3; 
+  font-size: 14px; 
+  font-weight: bold;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;  
+}
+
+.button:hover {
+  background-color: #000000; 
+  transform: translateY(-2px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.button:active {
+  transform: translateY(0);
+}
+
+
+.aboutme {
+  border: none;
+  border-radius: 20px;
+  width: 450px;
+  height: 450px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto; /* Updated margin to center horizontally */
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 215px rgba(255, 255, 255, 0.976);
+  background-color: linear-gradient(to right, #c1e5f3, #000000);
+}
+
+
+.aboutme:hover {
+  transform: scale(1.1);
+}
+
+.skills {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto; /* Updated margin to center horizontally */
+}
+
+h1 {
+  text-align: center;
+  margin-top: -20px;
+}
+
+.profile {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: block;
+}
+
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section {
+  width: calc(50% - 10px);
+}
+
+.right-section {
+  width: calc(50% - 10px);
+}
+
+.skillsheader {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.skillslist {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
+  margin: 0 auto 10px; 
+  max-width: 500px;
+  color: rgb(0, 0, 0);
+  transition: color 0.3s;
+}
+
+.skillslist li {
+  color: rgb(0, 0, 0);
+  transition: color 0.3s; 
+  margin-bottom: 10px; 
+
+}
+
+.skillslist li:hover {
+  color: #c1e5f3; 
+}
+
+.skills-images {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.skillsimage {
+  width: 45px;
+  height: 45px;
+  margin: 0 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header {
+  display: flex;
+  margin-top: 10px;
+}
+
+.headerphotos {
+  width: 40px;
+  height: auto;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+
+
+.email-box {
+  width: 120px;
+  height: 40px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+}
+
+.email-box:hover {
+  background-color: #c1e5f3;
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.email-box:active {
+  transform: translateY(0); 
 }
