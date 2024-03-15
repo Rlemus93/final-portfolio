@@ -63,9 +63,11 @@ const App = () => {
       <div className="container">
         <div className="left-section">
           <div className="aboutme">
+            <div className='left-titles'>
             <h3>
-              <u>About Me</u>
+              <u >About Me</u>
             </h3>
+            </div>
             <p>
             Hello there! I'm on the cusp of graduating from an intensive 4-month boot camp, where I've immersed myself in the world of Full Stack Development. My journey into tech was sparked by a profound curiosity about how technology shapes our daily lives and a strong desire to make a meaningful contribution to the field.
 
@@ -74,10 +76,8 @@ const App = () => {
             Driven by a passion for clean, efficient coding practices, I'm dedicated to staying ahead of industry trends and continuously expanding my knowledge base. I believe in the power of collaboration and thrive in team-oriented environments, drawing from my years of experience in sales and leadership roles to effectively communicate and problem-solve with colleagues.
 
             I invite you to explore my portfolio to get a glimpse of my projects and see how we can work together to turn your ideas into reality.
-            </p>
-          
-          </div>
-          <div className="skills"></div>
+
+            <div className="skills"></div>
           <h3 className="skillsheader">
             <u>Skills</u>
           </h3>
@@ -110,6 +110,10 @@ const App = () => {
               <img className="skillsimage" src={postgresql} alt="" />
             </div>
           </div>
+            </p>
+          
+          </div>
+          
         </div>
 
         <div className="right-section">
