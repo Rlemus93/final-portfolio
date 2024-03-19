@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Projects from './components/Projects';
+import Aboutme from './components/Aboutme';
+import Testimonials from './components/Testimonials';
 import './App.css';
-import profileimage from './images/profileimage.JPG';
 import github from './images/github.png';
 import linkdin from './images/linkdin.png';
 import verse from './images/verse.png';
 import tictactoe from './images/tictactoe.png';
 import poisongame from './images/poisongame.png';
 import comingsoon from './images/comingsoon.jpeg';
-import Aboutme from './components/Aboutme';
-import Testimonials from './components/Testimonials';
 
 const App = () => {
   const [loading, setLoading] = useState(true); // State to manage loading
@@ -17,20 +16,20 @@ const App = () => {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0)
 
   const projectNames = [
-    ['Quote/Verse Generator', 'HTML, JavaScript, and CSS.', <img src={verse} alt="" />],
-    ['Tic-Tac-Toe', 'First React App. React, HTML, JavaScript, and CSS.', <img src={tictactoe} alt="" />],
-    ['Poison Game', 'HTML, JavaScript, and CSS.', <img src={poisongame} alt="" />],
+    ['Tic-Tac-Toe', 'React, HTML, JavaScript, and CSS', <img src={tictactoe} alt="" />],
+    ['Quote/Verse Generator', 'HTML, JavaScript, and CSS', <img src={verse} alt="" />],
+    ['Poison Game', 'HTML, JavaScript, and CSS', <img src={poisongame} alt="" />],
     ['Capstone-Project', 'this is a little summary', <img src={comingsoon} alt="" />],
     ['future project', 'this is a little summary', <img src={comingsoon} alt="" />],
   ];
 
   const testimonials = [
-    ['Seth Christ',"Ryan is an aspiring software developer with an amazing work ethic. Everyday he shows up on time, ready to learn with enthusiasm that brings everybody's energy up. His ability to explain concepts shows that he practices and studies prior to class. Working with Ryan has been a pleasure", <img src={profileimage} alt="" />],
-    ['name2','Highly recommend! Professional and efficient.', <img src={github} alt="" />],
-    ['name3','Outstanding experience from start to finish. Will definitely return!', <img src={linkdin} alt="" />],
-    ['name4','Impressed by the quality of work and attention to detail.', <img src={profileimage} alt="" />],
-    ['name5','Excellent communication and quick turnaround. Couldnt be happier!', <img src={linkdin} alt="" />],
-    ['name6','Incredible results! Exceeded all expectations', <img src={github} alt="" />]
+    ['Seth Christ', "Ryan is an aspiring software developer with an amazing work ethic. Everyday he shows up on time, ready to learn with enthusiasm that brings everybody's energy up. His ability to explain concepts shows that he practices and studies prior to class. Working with Ryan has been a pleasure", <img src={linkdin} alt="" />],
+    ['name2', 'Highly recommend! Professional and efficient.', <img src={github} alt="" />],
+    ['name3', 'Outstanding experience from start to finish. Will definitely return!', <img src={linkdin} alt="" />],
+    ['name4', 'Impressed by the quality of work and attention to detail.', <img src={linkdin} alt="" />],
+    ['name5', 'Excellent communication and quick turnaround. Couldnt be happier!', <img src={linkdin} alt="" />],
+    ['name6', 'Incredible results! Exceeded all expectations', <img src={github} alt="" />]
   ]
 
   useEffect(() => {
@@ -74,7 +73,7 @@ const App = () => {
   return (
     <div>
       {loading ? (
-        <div className="loading-message">Welcome! Nice to meet you!</div>
+        <div className="loading-message">Welcome!</div>
       ) : (
         // Content after loading
         <>
@@ -85,9 +84,9 @@ const App = () => {
               Email Me
             </div>
           </header>
-          <h1 className='name'>
-            Ryan Lemus<img className="profile" src={profileimage} alt="Profile" />
-          </h1>
+
+          <h1 className='name'>Ryan Lemus</h1>
+          <h5 className='title'>Full Stack Web Developer</h5>
 
           <div className="container">
             <Aboutme />
@@ -104,9 +103,9 @@ const App = () => {
                   Next
                 </button>
               </div>
-              <div className='testimonial-cards'>
-                <Testimonials testimonials={testimonials[currentTestimonialIndex]} />
-              </div>
+            
+            <Testimonials testimonials={testimonials[currentTestimonialIndex]} />
+            
             </div>
           </div>
         </>

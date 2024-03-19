@@ -47,6 +47,10 @@ body {
   justify-content: center;
 }
 
+.projectname {
+  margin-top: -20px;
+}
+
 .projectname,
 .testimonals
  {
@@ -82,6 +86,17 @@ body {
   font-style: normal;
 }
 
+.testimonial-cards {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 600px;
+  height: 520px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 215px rgba(255, 255, 255, 0.976);   
+}
 
 .techstack {
   font-family: "Philosopher", sans-serif;
@@ -125,7 +140,7 @@ body {
   border: 2px solid black;
   border-radius: 20px;
   width: 540px;
-  height: 780px;
+  height: 950px;
   padding: 20px;
   text-align: center;
   margin: 20px;
@@ -205,16 +220,8 @@ body {
   margin: 20px auto; 
 }
 
-h1 {
-  text-align: center;
-  margin-top: -20px;
-  font-size: 48px;
-  font-weight: bold;
-  color: #000000; 
-  transition: text-shadow 0.6s;
-}
 
-h1:hover {
+.name:hover {
   text-shadow: 0 0 5px rgb(247, 244, 244); 
 }
 
@@ -222,8 +229,10 @@ h1:hover {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  margin: 20px auto;
   display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 20px; 
 }
 
 .name {
@@ -231,7 +240,30 @@ h1:hover {
   font-weight: 400;
   font-style: normal;
   font-size: 80px;
+  text-align: center; 
+  margin-bottom: 10px; 
+  margin-top: -10px;
+  color: #000000; 
+  transition: text-shadow 0.6s;
+
 }
+
+.name:hover {
+  text-shadow: 0 0 5px rgb(247, 244, 244); 
+}
+
+.title {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 20px;
+  text-align: center; 
+  margin-bottom: 50px;
+  margin-top: -10px;
+  color: #000000; 
+  transition: text-shadow 0.6s;
+}
+
 
 .container {
   display: flex;
@@ -297,3 +329,17 @@ header {
   font-size: 80px;
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+  
+  .left-section, .right-section {
+    width: 100%; /* Full width on smaller screens */
+    margin: 0; /* Remove margin to fit the screen */
+  }
+
+  .card, .aboutme {
+    width: 90%; /* Adjusted width for smaller screens */
+  }
+}
