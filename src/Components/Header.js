@@ -1,6 +1,9 @@
 import React from 'react';
 import github from '../images/github.png';
-import linkdin from '../images/linkdin.png';
+import linkedin from '../images/linkedin.png';
+import resume from '../images/resume.png'
+import email from '../images/email.png'
+
 
 const Header = () => {
   const handleLinkedInClick = () => {
@@ -32,18 +35,18 @@ const Header = () => {
       </nav>
       <div className="header-icons-container">
         <div className="header-icons">
-          <img className="headerphotos" src={linkdin} alt="" onClick={handleLinkedInClick} />
+         
+          <img className="headerphotos" src={linkedin} alt="" onClick={handleLinkedInClick} />
           <img className="headerphotos" src={github} alt="" onClick={handleGitHubClick} />
         </div>
-        <div className="email-box" onClick={handleEmailClick}>
-          Email Me
+        <div className="email-box">
+          <img className="headerphotos" src={email} alt="" onClick={handleEmailClick} />
         </div>
-        <div className="resumeLink" onClick={handleResumeClick}>
-          Resume
+        <div className="resumeLink">
+          <img className="headerphotos" src={resume} alt="" onClick={handleResumeClick} />
         </div>
       </div>
     </header>
   );
 };
-
 export default Header;

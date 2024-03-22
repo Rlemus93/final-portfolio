@@ -17,9 +17,9 @@ import html from './images/html.png'
 import ruby from './images/ruby.png'
 import rubyonrails from './images/rubyonrails.png'
 
+
 const App = () => {
   const [loading, setLoading] = useState(true);
-  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
 
   const projectNames = [
@@ -30,35 +30,40 @@ const App = () => {
         <img key="js" src={js} alt="JavaScript" />,
         <img key="css" src={css} alt="CSS" />
       ],
-      <img src={tictactoe} alt="" />
+      <img src={tictactoe} alt="" />,
+      'https://github.com/Rlemus93/tic-tac-toe'
     ],
     ['Quote/Verse Generator', [
       <img key="html" src={html} alt="Html" />,
       <img key="js" src={js} alt="JavaScript" />,
       <img key="css" src={css} alt="CSS" />
     ],
-      <img src={verse} alt="" />
+      <img src={verse} alt="" />,
+      'https://github.com/Rlemus93/random-quote-generator'
     ],
     ['Poison Game', [
       <img key="html" src={html} alt="Html" />,
       <img key="js" src={js} alt="JavaScript" />,
       <img key="css" src={css} alt="CSS" />
     ],
-      <img src={poisongame} alt="" />
+      <img src={poisongame} alt="" />,
+      'https://github.com/Rlemus93/Rlemus93.github.io'
     ],
     ['Capstone-Project', [
       <img key="ruby" src={ruby} alt="Ruby" />,
       <img key="rubyonrails" src={rubyonrails} alt="RubyOnRails" />,
       <img key="css" src={css} alt="CSS" />
     ],
-      <img src={comingsoon} alt="" />
+      <img src={comingsoon} alt="" />,
+      'https://example.com/capstone-project'
     ],
     ['future project', [
       <img key="html" src={html} alt="Html" />,
       <img key="js" src={js} alt="JavaScript" />,
       <img key="css" src={css} alt="CSS" />
     ],
-      <img src={comingsoon} alt="" />
+      <img src={comingsoon} alt="" />,
+      'https://example.com/future-project'
     ],
   ];
 
@@ -78,21 +83,13 @@ const App = () => {
   
     const interval = setInterval(() => {
       setCurrentTestimonialIndex(prevIndex => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
-    }, 5000);
+    }, 3500);
   
     return () => {
       clearTimeout(timeout);
       clearInterval(interval);
     };
   }, [testimonials.length]);
-
-  const nextProject = () => {
-    setCurrentProjectIndex(currentProjectIndex === projectNames.length - 1 ? 0 : currentProjectIndex + 1);
-  };
-
-  const prevProject = () => {
-    setCurrentProjectIndex(currentProjectIndex === 0 ? projectNames.length - 1 : currentProjectIndex - 1);
-  };
 
   return (
     <>
@@ -103,7 +100,7 @@ const App = () => {
           <Header />
           <div className="allSections">
             <div className="nameTitles" id="nameTitles">
-              <NameTitle />
+              <NameTitle/>
             </div>
             <div className="skillsSection" id="skillsSection">
               <Skills />
@@ -114,9 +111,6 @@ const App = () => {
             <div className="projectsSection" id="projectsSection">
               <Projects
                 projectNames={projectNames}
-                currentProjectIndex={currentProjectIndex}
-                prevProject={prevProject}
-                nextProject={nextProject}
               />
             </div>
             <div className="testimonialsSection" id="testimonialsSection">

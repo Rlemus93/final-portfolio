@@ -2,19 +2,27 @@
   border: none;
   border-radius: 20px;
   width: 80%;
-  max-width: 1200px; 
+  max-width: 700px; 
   margin: 0 auto; 
 }
 
 .projectCard {
-  border: none;
+  border: solid rgb(0, 0, 0) 2px;
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
   border-radius: 20px;
-  width: 100%; 
-  height: auto; 
+  width: 1000px ;
   padding: 20px;
-  text-align: center;
-  margin: 0 auto; 
-  position: relative; 
+  margin-right: 20px;
+}
+
+.projectCardContainer {
+  overflow: visible;
+  width: 100%;
+}
+
+.projectCardWrapper {
+  display: flex;
+  transition: transform 0.5s ease; 
 }
 
 .frontEndCards {
@@ -27,9 +35,8 @@
   margin: 0 auto; 
   position: relative; 
   margin-right: 15px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
 }
-
 
 .backEndCards {
   border: solid rgb(0, 0, 0);
@@ -40,7 +47,7 @@
   text-align: center;
   margin: 0 auto; 
   position: relative; 
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
 }
 
 .otherCards {
@@ -53,8 +60,9 @@
   margin: 0 auto; 
   position: relative;
   margin-left: 15px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
 }
+
 .frontEndCards:hover {
   background-color: #ffcccc; 
 }
@@ -79,6 +87,7 @@
   color: #fff7f7;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
   position: relative; 
+  
 }
 
 .projectHeading h1::after {
@@ -87,20 +96,17 @@
   width: 100%; 
   height: 2px; 
   background-color: #ffffff; 
-  position: absolute; 
-  bottom: -10px; 
-  left: 0; 
 }
 
 
 
 .project-image img {
-  width: 800px; 
+  width: 600px; 
   height: 500px; 
   transition: transform 0.3s;
   border: solid black 2px;
   border-radius: 20px;
-  margin-left: 40px;
+  opacity: 1; /* Ensure full opacity */
 }
 
 .project-image img:hover {
@@ -112,12 +118,12 @@
   padding: 20px;
   margin: 20px auto; 
   border-radius: 20px;
-  box-shadow: 0 100px 100px rgba(255, 253, 253, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Updated box shadow */
   font-family: "Yrsa", serif;
   width: 1200px; 
   text-align: center; 
   color: black;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
 }
 
 .testimonialsHeader {
@@ -158,94 +164,45 @@
 .projectname{
   font-size: 50px;
   font-weight: bold;
-  color: #ffffff; 
+  color: #000000; 
   transition: text-shadow 0.3s;
   font-family: "Yrsa", serif;
   font-weight: 300;
   font-style: normal;
-}
+  justify-content: center;
+  display: flex; 
+  align-items: flex-start;
 
-.projectname:hover {
-  text-shadow: 0 20px 100px rgb(255, 255, 255); 
 }
-
-.techstack {
-  display: flex;
-  flex-direction: column; 
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 50px; 
-}
-
-.techstack img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 20px; 
-  border-radius: 8px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out; 
-}
-
-.techstack img:hover {
-  transform: scale(1.1); 
-}
-
 
 
 .buttons {
-  position: absolute;
-  bottom: -90px; 
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
-  justify-content: space-between;
-  padding: 0 100px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .button {
   height: 60px;
   width: 180px;
-  border: 2px solid transparent;
+  border: 2px solid #000000;
   border-radius: 8px;
-  background-color: #000000;
-  color: #ffffff;
-  font-size: 40px;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+  font-size: 20px;
   font-weight: bold;
   font-family: "Yrsa", serif;
-  font-weight: 700;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-  overflow: hidden;
-  position: relative;
-  margin-left: 10px;
   cursor: pointer;
-}
-
-.button::before {
-  content: '';
-  position: absolute;
-  background: linear-gradient(45deg, #ffffff, #000000);
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  transition: width 0.3s, height 0.3s, transform 0.3s;
-  border-radius: 50%;
-  z-index: 0;
-  
-}
-
-.button:hover::before {
-  width: 0;
-  height: 0;
-  transition: width 0.3s, height 0.3s, transform 0.3s;
+  margin: 15px;
 }
 
 .button:hover {
+  background-color: #000000;
   color: #ffffff;
-  border-color: #ffffff;
-  transform: translateY(-2px) scale(1.05); 
+  transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #000000;
+  border-radius: 8px;
 }
 
 
@@ -292,7 +249,7 @@
   padding: 20px;
   border-left: 4px solid #000306;
   border-top: 4px solid #000306;
-  background-color: #ffffff; 
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
   margin-bottom: 40px;
   border-radius: 20px;
 }
@@ -415,6 +372,7 @@
 }
 
 
+
 header {
   display: flex;
   justify-content: space-between;
@@ -433,10 +391,19 @@ header {
   align-items: center;
 }
 
-.header-icons {
-  display: flex; 
-  margin-right: 20px; /* Adjust margin to provide space between icons */
+
+
+
+
+@keyframes move {
+  0% {
+    transform: translateX(-25%); /* Start position: fully left */
+  }
+  100% {
+    transform: translateX(100%); /* End position: fully right */
+  }
 }
+
 
 .headerphotos {
   width: 50px;
@@ -445,6 +412,14 @@ header {
   margin-bottom: 10px;
   margin-top: 10px;
   cursor: pointer;
+}
+
+.headerphotos:hover {
+  transform: translateY(-2px); 
+}
+
+.headerphotos:active {
+  transform: translateY(0); 
 }
 
 
@@ -473,25 +448,21 @@ header {
 }
 
 .navbar a {
-  width: 150px;
-  height: 45px;
-  border: 2px solid #000000;
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #000000;
-  font-size: 20px;
+  font-size: 22px;
   font-family: "Yrsa", serif;
   font-weight: 700;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
 }
 
 .navbar a:hover {
-  background-color: #c1e5f3;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
 }
 
 .navbar a {
@@ -500,26 +471,13 @@ header {
 
 
 .email-box {
-  width: 150px;
-  height: 45px;
-  border: 2px solid #000000;
-  border-radius: 8px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000000;
-  font-size: 20px;
-  font-family: "Yrsa", serif;
-  font-weight: 700;
-
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
 }
 
 .email-box:hover {
-  background-color: #c1e5f3;
-  transform: translateY(-2px); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  transform: translateY(-2px);  
 }
 
 .email-box:active {
@@ -528,26 +486,14 @@ header {
 
 
 .resumeLink {
-  width: 150px;
-  height: 45px;
-  border: 2px solid #000000;
-  border-radius: 8px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000000;
-  font-size: 20px;
-  font-family: "Yrsa", serif;
-  font-weight: 700;
-  margin: 0 20px; 
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  margin-right: 30px;
 }
 
 .resumeLink:hover {
-  background-color: #c1e5f3;
-  transform: translateY(-2px); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  transform: translateY(-2px);  
 }
 
 .resumeLink:active {
@@ -577,8 +523,8 @@ header {
   font-size: 250px;
   color: #ffffff;
   z-index: 9999;
-  animation: scroll 1000s linear infinite;
-  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #ffffff;
+  animation: scroll 150s linear infinite;
+  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #000000;
 }
 
 
@@ -605,7 +551,7 @@ header {
   .nameTitles,
   .skillsSection,
   .aboutmeSection,
-  .projectsSection,
+  /* .projectsSection, */
   .testimonialsSection {
     height: 100vh;
     display: flex;
@@ -615,6 +561,11 @@ header {
   }
   
   
+.projectsSection{
+  background-color:;
+  
+}
+
   @keyframes scroll {
     100% {
       background-position: 0px -400%;
@@ -631,7 +582,7 @@ header {
     animation: scroll 650s linear infinite;
     background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
       #111111;
-    color: #eee;
+    color: #ffffff;
     height: 500vh;
     min-width: 360px;
     width: 100%;
