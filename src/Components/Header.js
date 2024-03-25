@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   const handleResumeClick = () => {
-    window.open('/resume.pdf', '_blank');
+    window.open('resume.pdf', '_blank');
   };
 
   return (
