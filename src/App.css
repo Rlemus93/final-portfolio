@@ -6,6 +6,10 @@
   margin: 0 auto;
 }
 
+.project-cont {
+  width: 100%;
+}
+
 .projectCard {
   border: solid rgb(0, 0, 0) 2px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -144,8 +148,8 @@
 }
 
 .testimonials-image img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -166,7 +170,7 @@
 .buttons {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 0.2rem;
 }
 
 .button {
@@ -180,7 +184,6 @@
   font-weight: bold;
   font-family: "Yrsa", serif;
   cursor: pointer;
-  margin: 15px;
 }
 
 .button:hover {
@@ -462,15 +465,6 @@ header {
   transform: translateY(0);
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .loading-message {
   position: fixed;
   top: 0;
@@ -510,11 +504,12 @@ header {
 }
 
 .nameTitles,
-  .skillsSection,
-  .aboutmeSection,
-  /* .projectsSection, */
-  .testimonialsSection {
+.skillsSection,
+.aboutmeSection,
+.projectsSection,
+.testimonialsSection {
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;

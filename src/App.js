@@ -20,6 +20,7 @@ import bankbuddy from "./images/bankbuddy.png"
 import cattinder from "./images/cat-tinder.png"
 import apartment from "./images/apartment.png"
 import nat from "./images/nat.jpeg"
+import seth from "./images/seth.png"
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -46,7 +47,7 @@ const App = () => {
       ],
       <img src={cattinder} alt="" />,
       "https://github.com/Rlemus93/Cat-Tinder-Frontend",
-      "Built using React, Ruby on Rails, and Ruby, Cat-Tinder is a a social app to help cats owners find playdates for their cats.",
+      "Built using React, Ruby on Rails, and Ruby, Cat-Tinder is a a social app to help cats owners find playdates for their cats. view other cats profiles and connect.",
     ],
     [
       "Homestead Living",
@@ -96,9 +97,9 @@ const App = () => {
 
   const testimonials = [
     [
-      "Seth Christ",
+      "Seth Crist",
       "Ryan is an aspiring software developer with an amazing work ethic. Everyday he shows up on time, ready to learn with enthusiasm that brings everybody's energy up. His ability to explain concepts shows that he practices and studies prior to class. Working with Ryan has been a pleasure",
-      <img src={comingsoon} alt="" />,
+      <img src={seth} alt="" />,
     ],
     [
       "Natalie Pashal",
